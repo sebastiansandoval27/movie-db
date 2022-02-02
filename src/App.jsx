@@ -1,8 +1,12 @@
+import { useEffect, useState } from "react";
+import "./styles/app.css";
+import Header from "./components/Header";
+
 function App() {
   return (
-    <div className="App">
-      <h4>Works</h4>
-    </div>
+    <main className="main">
+      <Header />
+    </main>
   );
 }
 
