@@ -1,0 +1,77 @@
+.movies-item {
+  width: 150px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.movies-item .hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+  opacity: 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding-top: 85px;
+  font-size: 26px;
+  visibility: hidden;
+  z-index: 2;
+}
+.movies-item:hover .hover {
+  opacity: 1;
+  visibility: visible;
+}
+.movies-item-image {
+  width: 100%;
+  height: 200px;
+}
+.movies-item-image img {
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: 5px 0px 15px 1px rgba(0, 0, 0, 0.66);
+  box-shadow: 5px 0px 15px 1px rgba(0, 0, 0, 0.66);
+  border-radius: 5px;
+}
+.movies-item-title {
+  font-size: 12px;
+  font-weight: bold;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-top: 5px;
+  font-weight: 800;
+}
+.movies-item-date {
+  margin-top: 5px;
+  font-size: 11px;
+}
+.movies-item-title,
+.movies-item-date {
+  height: auto;
+  width: 100%;
+  color: white;
+}
+
+.not-found-div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: grey;
+  background-color: gainsboro;
+}
