@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./styles/app.css";
 import Header from "./components/Header";
 import MoviesGrid from "./components/MoviesGrid";
+import Modal from "./components/Modal";
 
 function App() {
   const [movies, setMovies] = useState([]);
@@ -68,10 +69,27 @@ function App() {
             getMovieById(id);
           }}
         />
-        <div className="more">
-          <button onClick={() => getMovies(page)}>Cargar más</button>
-        </div>
+        {!loadingImage && (
+          <div className="more">
+            <button onClick={() => getMovies(page)}>Cargar más</button>
+          </div>
+        )}
       </section>
+      <div
+        className={`loading-images ${
+          loadingImages ? "show-loading" : "hidden-loading"
+        }`}
+      >
+        <img src="/images/logo.png" alt="Loader" />
+      </div>
+      {!loadingImage && (
+        <Modal
+          showModal={showModal}
+          closeModal={() => setShowModal(false)}
+          movie={movieById}
+          loadingImage={loadingImage}
+        />
+      )}
     </main>
   );
 }

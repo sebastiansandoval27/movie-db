@@ -9,6 +9,29 @@
   align-items: center;
   overflow: hidden;
 }
+
+.loading-images {
+  width: 100vw;
+  height: 100vh;
+  transition: all 0.3s ease;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  background-color: rgb(0, 133, 250);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+  animation: fadein 0.5s;
+}
+
+.show-loading {
+  visibility: visible;
+}
+.hidden-loading {
+  animation: fadeOut 0.5s;
+  visibility: hidden;
+}
 .more {
   width: 100%;
   margin: 20px 0;
